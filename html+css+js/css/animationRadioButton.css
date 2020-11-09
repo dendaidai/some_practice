@@ -1,0 +1,89 @@
+body{
+	background-color: #262626;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#container{
+	
+}
+h1{
+	color: #E4E4E4;
+	text-transform: uppercase;
+	font-size: 50px;
+	line-height: 160px;
+}
+.content{
+	/* background-color: wheat; */
+	text-align: center;
+	position: relative;
+}
+input{
+	display: none;
+}
+label{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: #1B1B1B;
+	margin-left: 20px;
+	border-radius: 20px;
+}
+.global{
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #E4E4E4;
+	position: absolute;
+	top: 20px;
+	left: 98px;
+	border-radius: 50%;
+	transition:transform 1s;
+	transition: left 0.3s ease 0.2s;
+}
+#bt1:checked ~ .global{
+	animation: input1 0.8s ease;
+	left: 98px;
+}
+@keyframes input1{
+	30%,60%{
+		transform: scale(0.5);
+	}
+}
+#bt2:checked ~ .global{
+	animation: input2 1s;
+	left: 223px;
+}
+@keyframes input2{
+	30%,50%{
+		transform: scale(0.5);
+	}
+}
+#bt3:checked ~ .global{
+	animation: input3 1s;
+	left: 348px;
+}
+@keyframes input3{
+	30%,50%{
+		transform: scale(0.5);
+	}
+}
+#bt4:checked ~ .global{
+	animation: input4 1s;
+	left: 473px;
+}
+@keyframes input4{
+	30%,50%{
+		transform: scale(0.5);
+	}
+}
+#bt5:checked ~ .global{
+	animation: input5 1s;
+	left: 598px;
+}
+@keyframes input5{
+	30%,50%{
+		transform: scale(0.5);
+	}
+}

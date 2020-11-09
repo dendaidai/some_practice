@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dark Light Menu</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/DarkLightMenu.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<span id="dark">DARK</span>
+			<div id="bg">
+				<div id="global"></div>
+			</div>
+			<span id="light">LIGHT</span>
+		</div>
+		<div id="menu">
+			<ul id="content">
+				<li class="first"><a href="#">HOME</a></li>
+				<li class="other"><a href="#">INSTAGRAM</a></li>
+				<li class="other"><a href="#">GITHUB</a></li>
+				<li class="other"><a href="#">WEBPAGE</a></li>
+				<li class="other"><a href="#">ABOUT</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var bd = document.querySelector("body");
+			var bg = document.getElementById("bg");
+			var gb = document.getElementById("global");
+			var dark = document.getElementById("dark");
+			var light = document.getElementById("light");
+			var menu = document.getElementById("content").children;
+			console.log(menu);
+			bg.onclick = function(){
+				var i;
+				bg.classList.toggle("active");
+				gb.classList.toggle("active");
+				dark.classList.toggle("active");
+				light.classList.toggle("active");
+				bd.classList.toggle("active");
+				for(i=0;i<menu.length;i++){
+					menu[i].classList.toggle("active");
+				}
+			}
+		</script>
+	</body>
+</html>

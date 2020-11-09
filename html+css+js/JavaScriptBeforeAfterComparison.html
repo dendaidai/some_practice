@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScriptBeforeAfterComparison</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/JavaScriptBeforeAfterComparison.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div class="image"></div>
+			<div class="image"></div>
+		</div>
+		<script type="text/javascript">
+			var con = document.getElementById("container");
+			var x,width;
+			con.onmouseenter = function(){
+				var ele = con.getBoundingClientRect();
+				x = ele.x;
+				width = ele.width;
+				/* console.log(x+" "+width); */
+			}
+			con.onmousemove = function(e){
+				var rs = ((e.clientX-x)/width)*100;
+				con.style.setProperty("--x",rs+"%");
+				/* console.log(rs); */
+			}
+		</script>
+	</body>
+</html>

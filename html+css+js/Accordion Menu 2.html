@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>手风琴菜单2</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Accordion%20Menu%202.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<h2>Accordion Menu 2</h2>
+			
+			<div class="menu">
+				<a>What is Angular JS? How to use?</a>
+				<div class="info">
+					<p>Lorem ipsum dolor sit amet, 
+					consectetur adipiscing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Elementum sagittis vitae et leo duis ut. 
+					Ut tortor pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+			
+			<div class="menu">
+				<a>What is Angular JS? How to use?</a>
+				<div class="info">
+					<p>Lorem ipsum dolor sit amet, 
+					consectetur adipiscing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Elementum sagittis vitae et leo duis ut. 
+					Ut tortor pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+			
+			<div class="menu">
+				<a>What is Angular JS? How to use?</a>
+				<div class="info">
+					<p>Lorem ipsum dolor sit amet, 
+					consectetur adipiscing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Elementum sagittis vitae et leo duis ut. 
+					Ut tortor pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+			
+			<div class="menu">
+				<a>What is Angular JS? How to use?</a>
+				<div class="info">
+					<p>Lorem ipsum dolor sit amet, 
+					consectetur adipiscing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Elementum sagittis vitae et leo duis ut. 
+					Ut tortor pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+			/* console.log(document.styleSheets) */
+			var tagA = document.querySelectorAll("a")
+			Array.prototype.forEach.call(tagA,function(item){
+				item.addEventListener("click",toggleAccordion)
+			}) 
+			function toggleAccordion(){
+				this.classList.toggle("active")
+				this.nextElementSibling.classList.toggle("active")
+			}
+		</script>
+	</body>
+</html>

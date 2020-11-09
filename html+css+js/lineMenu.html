@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>lineMenu</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/lineMenu.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<span class="bigBar topLeft pause"></span><span class="smallBar topRight pause"></span>
+			<ul>
+				<li>HOME</li>
+				<li>INSTAGRAM</li>
+				<li>WEBPAGE</li>
+				<li>GITHUB</li>
+			</ul>
+			<span class="smallBar bottomLeft pause"></span><span class="bigBar bottomRight pause"></span>
+		</div>
+		<script type="text/javascript">
+			const spans = document.querySelectorAll("span");
+			const txt = document.querySelector("ul");
+			
+			Array.prototype.forEach.call(spans,function(span){
+				span.addEventListener("click",function(){
+					txt.classList.toggle("active");
+					for(let i=0;i<spans.length;i++){
+						spans[i].classList.toggle("active");
+					}
+				},false)
+			})
+			
+		</script>
+	</body>
+</html>

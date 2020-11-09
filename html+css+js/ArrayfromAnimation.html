@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Array.from Animation</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ArrayfromAnimation.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Array.from</h1>
+				<input id="txt" type="text" placeholder="text..."/>
+				<button type="button" id="but" onclick="active()">CLICK</button>
+		</div>
+		<div id="boxes"></div>
+		<script type="text/javascript">
+			function active(){
+				var txt = document.getElementById("txt").value;
+				var boxes = document.getElementById("boxes");
+				for(var i=0;i<txt.length;i++){
+					var newEle = document.createElement("div");
+					newEle.innerText = txt[i];
+					newEle.classList.add("box");
+					document.getElementById("boxes").appendChild(newEle);
+				}
+				for(var j=0;j<3;j++){
+					var brs = document.createElement("br");
+					document.getElementById("boxes").appendChild(brs);
+				}
+			}
+		</script>
+	</body>
+</html>

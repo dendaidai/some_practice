@@ -1,0 +1,40 @@
+/* 为了保证页面在不同浏览器风格统一，我们先进行重置样式的设定 */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow-x: hidden;
+}
+/* 清除h1~h6样式 */
+h1,h2,h3,h4,h5,h6{
+	font-size: 16px;
+	font-weight: normal;
+}
+/* 列表样式 */
+ul,ol,li{
+	list-style: none;
+}
+u,a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+input{
+   outline: none;	
+}
+b,strong{
+	font-weight: normal;
+}
+em,i{
+	font-style: normal;
+}
+.clear_fix::after{
+	content: "";
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+	display: block;
+}

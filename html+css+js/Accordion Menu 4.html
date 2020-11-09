@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>菜单4</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Accordion%20Menu%204.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<h3>Accordion Menu 4</h3>
+			<div class="section">
+				<div class="tit">Read me</div>
+				<div class="content">
+				<p>Click on an item to open. Click on its header or the list header to close.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="tit">Read me too</div>
+				<div class="content">
+				<p>Add the class 'arrows' to nav.accordion to add dropdown arrows.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="tit">Item 3</div>
+				<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="tit">Item 4</div>
+				<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="tit">Item 5</div>
+				<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                pretium viverra suspendisse potenti.</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var sections = document.querySelectorAll(".section")
+			Array.prototype.forEach.call(sections,function(item){
+				item.addEventListener("click",aHalder)
+			})
+			function aHalder(){
+				this.classList.toggle("active")
+				this.lastElementChild.classList.toggle("active")
+			}
+		</script>
+	</body>
+</html>

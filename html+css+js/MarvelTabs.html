@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css"/>
+	<link rel="stylesheet" type="text/css" href="css/MarvelTabs.css"/>
+</head>
+<body>
+<div id="container">
+	<div id="tab">
+		<div class="item item1" onclick="goto(event,'gaoyue')">高月</div>
+		<div class="item item2" onclick="goto(event,'yanlinji')">焰灵姬</div>
+		<div class="item item3" onclick="goto(event,'shaosiming')">大少司命</div>
+	</div>
+	<div class="show" id="show1">
+		<div class="img img_1"></div>
+		<h2>高月</h2>
+		<p>原为墨家女弟子，精通药理，是墨家统领端木蓉的得力帮手。没有学过武功，却在阴阳巫术方面也有着非比寻常的天赋。后被阴阳家右护法月神抓走，
+		一度被消去记忆（后期在斗争中逐渐恢复），带入阴阳家，被告知“姓姬，
+		名如，字千泷”，拥有延续千年姬姓最尊贵家族的血脉。之后进入蜃楼，
+		是解开“苍龙七宿”的关键要素之一</p>
+	</div>
+	<div class="show" id="show2">
+		<div class="img img_2"></div>
+		<h2>焰灵姬</h2>
+		<p>来自百越的一名柔情似水，热情似火的神秘女子。
+		小时候一场大火烧毁了焰灵姬的家园导致她家破人亡，
+		其中有一个弟弟生死不明，因为天赋异禀精通火系法术善于施展火焰攻击，
+		后来被喜欢招揽各路奇人异士的“赤眉龙蛇”收入麾下。成为恐惧杀手之一，
+		并开始对韩国复仇，想帮助天泽复国</p>
+	</div>
+	<div class="show" id="show3">
+		<div class="img img_3"></div>
+		<h2>大少司命</h2>
+		<p>动画系列中已登场的唯一一位任这个职位的人物，是一位年轻女性：
+		令人闻风丧胆的死亡使者之一。性情冷漠，有着与年龄不相符的高深武功。总是以面纱遮面，
+		传说她美若天仙，但这世上还没有人见过她面纱之下的真正面目。
+		在动画页游特别篇《秦时明月之罗生堂下》中作为女主角</p>
+	</div>
+</div>
+<script type="text/javascript">
+	const show1 = document.getElementById("show1");
+	const show2 = document.getElementById("show2");
+	const show3 = document.getElementById("show3");
+	
+	function goto(event,value){
+		/* console.log(event); */
+		if(value==='gaoyue'){
+			show1.classList.add("active");
+			show2.classList.remove("active")
+			show3.classList.remove("active")
+		}else if(value==='yanlinji'){
+			show2.classList.add("active");
+			show1.classList.remove("active")
+			show3.classList.remove("active")
+		}else{
+			show3.classList.add("active");
+			show1.classList.remove("active")
+			show2.classList.remove("active")
+		}
+	}
+</script>
+</body>
+</html>

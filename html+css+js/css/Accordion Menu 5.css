@@ -1,0 +1,62 @@
+body{
+	background-color: #262626;
+	display: flex;
+	overflow: hidden;
+}
+#container{
+	width: 376px;
+	margin: 50px auto;
+}
+h3{
+	line-height: 60px;
+	color: white;
+	padding-left: 80px;
+}
+.section{
+	position: relative;
+	overflow: hidden;
+}
+.section .tit{
+	line-height: 60px;
+	background-color: #EEEEEE;
+	padding-left: 20px;
+	border-radius: 2px;
+	border-top: 1px solid #7D7D7D;
+	border-bottom: 1px solid #7D7D7D;
+	cursor: pointer;
+}
+.section .tit:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    box-shadow: inset 0px 0px 12.5px #262626; 
+}
+.section .content{
+	
+	background-color: #DEDEDE;
+	max-height: 0;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.section .content p{
+	padding: 0px;
+	transition: all 0.5s;
+}
+.section .content p.active{
+	padding: 20px;
+	transition: all 0.5s;
+}
+.section .content.active{
+	max-height: 100%;
+	opacity: 1;
+	transition: all 0.5s;
+}
+.section .tit.active:before{
+	background-color: #325426;
+}

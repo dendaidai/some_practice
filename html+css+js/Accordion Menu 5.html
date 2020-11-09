@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>菜单5</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Accordion%20Menu%205.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<h3>Accordion Menu 5</h3>
+			<div class="section">
+				<div class="tit">What is HTML ?</div>
+				<div class="content">
+					<p>HTML is a computer language devised to allow
+                    website creation. These websites can then be viewed
+                    by anyone else connected to the Internet. It is relatively
+                    easy to learn, with the basics being accessible to most
+                    people in one sitting; and quite powerful in what it allows
+                    you to create.</p>
+				</div>
+			</div>
+			
+			<div class="section">
+				<div class="tit">What is JS ?</div>
+				<div class="content">
+					<p>JavaScript is a scripting language used to 
+                    create and control dynamic website content—but 
+                    that might not make a lot of sense if you’re new 
+                    to tech.</p>
+				</div>
+			</div>
+			
+			<div class="section">
+				<div class="tit">What is CSS ?</div>
+				<div class="content">
+					<p>CSS is the language for describing the presentation 
+                    of Web pages, including colors, layout, and fonts.
+                    It allows one to adapt the presentation to different 
+                    types of devices, such as large screens, small screens, 
+                    or printers.</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var tits = document.querySelectorAll(".tit")
+			Array.prototype.forEach.call(tits,function(item){
+				item.addEventListener("click",tog)
+			})
+			function tog(){
+				this.classList.toggle("active")
+				this.nextElementSibling.classList.toggle("active")
+				this.nextElementSibling.lastElementChild.classList.toggle("active")
+			}
+		</script>
+	</body>
+</html>

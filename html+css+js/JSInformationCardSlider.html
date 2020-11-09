@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JSInformationCardSlider</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/JSInformationCardSlider.css"/>
+	</head>
+	<body>
+		<div id="container">
+		<div class="card" id="card1">
+			<div class="img"></div>
+			<h2>The Magnificent Stag</h2>
+			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris 
+                    condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<div class="prev">PREV</div>
+			<div class="next" onclick="next()">NEXT</div>
+		</div>
+		<div class="card" id="card2">
+			<div class="img"></div>
+			<h2>The Courageous Bear</h2>
+			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris 
+                    condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<div class="prev" onclick="prev()">PREV</div>
+			<div class="next" onclick="next()">NEXT</div>
+		</div>
+		<div class="card" id="card3">
+			<div class="img"></div>
+			<h2>The Sneaky Mouse</h2>
+			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris 
+		            condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<div class="prev" onclick="prev()">PREV</div>
+			<div class="next" onclick="next()">NEXT</div>
+		</div>
+		<div class="card" id="card4">
+			<div class="img"></div>
+			<h2>The Sneaky Mouse</h2>
+			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris 
+		            condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<div class="prev" onclick="prev()">PREV</div>
+			<div class="next">NEXT</div>
+		</div>
+		</div>
+		<script type="text/javascript">
+			const card1 = document.getElementById("card1"),
+			      card2 = document.getElementById("card2"),
+				  card3 = document.getElementById("card3"),
+				  card4 = document.getElementById("card4");
+				  
+			const bd = document.body;
+			
+			const arr = [card1,card2,card3,card4];
+			
+			//卡片索引
+			let index = 0;
+			
+			function prev(){
+				if(index!==0){
+					arr[index].classList.toggle("active");
+					index--;
+					changeBg();
+				}
+			}
+			
+			function next(){
+				if(index!==(arr.length-1)){
+					arr[index+1].classList.toggle("active");
+					index++;
+					changeBg();
+				}
+			}
+			
+			//更新背景颜色
+			function changeBg(){
+				if(index===0){
+					bd.style.backgroundColor="#DE732D";
+				}else if(index===1){
+					bd.style.backgroundColor="#7C4019";
+				}else if(index===2){
+					bd.style.backgroundColor="#8B8B8B";
+				}else if(index===3){
+					bd.style.backgroundColor="#E8672E";
+				}
+			}
+		</script>
+	</body>
+</html>

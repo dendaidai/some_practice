@@ -1,0 +1,264 @@
+/*版心区域*/
+#logo-wrap,#nav-wrap,#banner-wrap,#news-wrap,#case-wrap,#link-wrap,#footer-wrap{
+	width: 960px;
+	margin: 0px auto;
+}
+/*logo*/
+#logo-wrap{
+	height: 100px;
+	/*background: pink;*/
+}
+.logo_l{
+	padding-top: 34px;
+	float: left;
+}
+.logo_r{
+	width: 228px;
+	padding-top: 38px;
+	float:right;
+}
+.logo_r .txt{
+	width: 185px;
+	height: 26px;
+	border: 1px solid #e5e5e5;
+	background-color: #f1f1f1;
+	font-size: 9px;
+	text-transform: uppercase;
+	color: #8a8a8a;
+	padding-left: 14px;
+	display: block;
+	float: left;
+	border-right: 0;
+}
+.logo_r .but{
+	width: 28px;
+	height: 28px;
+	border: 1px solid #e5e5e5;
+	background: #f1f1f1 url(../img/search_03.png) no-repeat center;
+	float: left;
+	border-left:0 ;
+}
+/*nav*/
+#nav{
+	width:100%;
+	background: black;
+}
+#nav-wrap .nav_ul{
+	height: 58px;	
+}
+.nav_ul li{
+	float: left;
+	border-right:1px solid #484848 ;
+}
+.nav_ul li a{
+	width:119px;
+	line-height: 58px;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	display: block;
+}
+.nav_ul .end_li{
+	border: none;
+}
+/*banner*/
+#banner{
+	background: #484848;
+	overflow: hidden;
+}
+#banner-wrap{
+	height: 465px;
+	/*background: paleturquoise;*/
+	position: relative;
+}
+#banner-wrap img{
+	position: absolute;
+	left:50%;
+	margin-left: -674px;
+}
+/*新闻部分*/
+#news-wrap{
+	/*background: pink;*/
+	height: 240px;
+}
+#news-wrap .news_left{
+	width: 480px;
+	height: 240px;
+	/*background: palegreen;*/
+	float: left;
+}
+.news_title{
+	font-size: 16px;
+	line-height: 16px;
+	padding: 36px 0px 22px 0px;
+	color: #42454a;
+}
+.news_list li{
+	height: 24px;
+	font-size: 12px;
+	line-height: 24px;
+	background: url(../img/point.png) no-repeat left center;
+	padding-left: 9px;
+}
+.news_list li span{
+	width: 284px;
+	color: #535353;
+	/*display: inline-block;*/
+	float: left;
+	/*  多出文本省略效果*/
+	/* 1 容器中加内容溢出不可见 */
+	overflow: hidden;
+	/* 2 文本溢出省略 */
+	text-overflow: ellipsis;
+	/* 3 文本不换号连续显示 */
+	white-space: nowrap;
+}
+.news_list li em{
+	color: #dadada;
+	float: right;
+	margin-right: 28px;
+}
+.news_center{
+	width: 200px;
+	height: 240px;
+	background: #f1f1f1;
+	float: left;
+	padding: 0px 20px;
+}
+.news_center p{
+	font-size: 12px;
+	line-height: 24px;
+}
+.news_center .txt1{
+	color: #595959;
+	margin-bottom: 12px;
+}
+.news_center .txt2{
+	color: #949494;
+}
+.news_right{
+	width:200px;
+	height: 240px;
+	padding: 0px 20px;
+	float: left;
+	background: #fbfbfb url(../img/news_bg_07.png) no-repeat right bottom;
+}
+.news_right p{
+	font-size: 12px;
+	line-height: 24px;
+	color: #595959;
+	margin-bottom: 27px;
+}
+.news_right a{
+	display: block;
+	width: 66px;
+	height: 19px;
+	background: url(../img/news_btn_03.png) no-repeat;
+}
+/*市场项目*/
+#case-wrap{
+	height: 305px;
+	/*background: pink;*/
+}
+#case-wrap h2{
+	font-size: 18px;
+	line-height: 18px;
+	color: #41444b;
+	padding: 29px 0px 18px 0px;
+}
+#case-wrap #case_show{
+	height: 240px;
+	/*background: palegreen;*/
+}
+#case_show dl{
+	width:210px;
+	/*background: peru;*/
+	float: left;
+	margin-right: 40px;
+}
+#case_show dt img{
+	display: block;
+}
+#case_show dl dd{
+	font-size: 12px;
+	line-height: 24px;
+	color: #525252;
+	margin-top: 13px;
+}
+#case_show .case_end{
+	margin: 0px;
+}
+/*联系我们*/
+#link{
+	background: #e5e5e5;
+}
+#link-wrap{
+	height: 250px;
+	/*background: pink;*/
+}
+#link-wrap #link_left{
+	width: 453px;
+	height: 250px;
+	/*background: palegoldenrod;*/
+	float: left;
+}
+#link-wrap .link_title{
+	height: 15px;
+	line-height: 15px;
+	color: #5f5f5f;
+	padding: 30px 0px 10px 10px;
+	border-bottom: 1px solid #c2c2c2;
+	margin-bottom: 14px;
+}
+#link-wrap #link_left ul,#link-wrap #link_center ul{
+	width: 150px;
+	float: left;
+	/*background: palevioletred;*/
+}
+#link-wrap #link_left ul li,#link-wrap #link_center ul li{
+	font-size: 12px;
+	line-height: 24px;
+	color: #5e5e5e;
+	padding-left: 14px;
+	background: url(../img/links_bg_03.png) no-repeat left center;
+}
+#link-wrap #link_center{
+	width: 153px;
+	height: 250px;
+	/*background: peru;*/
+	float: left;
+	margin: 0px 50px;
+}
+#link-wrap #link_right{
+	width: 254px;
+	height: 250px;
+	/*background: palevioletred;*/
+	float: left;
+}
+#link-wrap #link_right img{
+	display: block;
+	margin: 0px auto;
+}
+/*底部*/
+#footer-wrap{
+	height: 82px;
+	/*background: palegoldenrod;*/
+}
+#footer-wrap p{
+	padding-top: 23px;
+}
+
+#footer-wrap p a,#footer-wrap p span{
+	font-size: 10px;
+	line-height: 10px;
+	color: #a1a1a1;
+	
+}
+#footer-wrap p .lin_a{
+	padding: 0 7px;
+	border-right: 1px solid #ccc;
+}
+#footer-wrap p .end_a{
+	padding-left: 7px;
+	margin-right: 93px;
+}

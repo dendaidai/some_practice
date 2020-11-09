@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JShoverEffect</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/JShoverEffect.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="text">JS</div>
+			<div class="loader1"></div>
+			<div class="loader2"></div>
+			<div class="loader3"></div>
+			<div class="loader4"></div>
+		</div>
+		<script type="text/javascript">
+			const container = document.getElementById("container");
+			let full = false;
+			container.addEventListener("click",function(){
+				full = !full;
+				this.style.backgroundColor = full?"#AA9600":"transparent";
+			},false)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+body{
+	background-color: #252626;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+#container{
+	width: 380px;
+	height: 50px;
+	/* background-color: #00B8CF; */
+	display: flex;
+	justify-content: space-between;
+}
+.circle{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: relative;
+}
+.circle::before{
+	content: "";
+	position: absolute;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	top: 2px;
+	left: 2px;
+	animation: circleAni 2.5s ease-in-out infinite;
+}
+#red,#red::before{
+	background-color: #D21F1F;
+	animation-delay: 0s;
+}
+#green,#green::before{
+	background-color: #69C820;
+	animation-delay: 0.3s;
+}
+#yellow,#yellow::before{
+	background-color: #CEB32A;
+	animation-delay: 0.6s;
+}
+#blue,#blue::before{
+	background-color: #306BB3;
+	animation-delay: 0.9s;
+}
+
+@keyframes circleAni{
+	from{
+		transform: scale(0.8);
+		opacity: 1;
+	}
+	to{
+		transform: scale(2.5);
+		opacity: 0;
+	}
+}

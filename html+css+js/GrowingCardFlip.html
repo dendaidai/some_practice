@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Growing Card Flip</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/GrowingCardFlip.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="front">Front</div>
+			<div id="back">Back</div>
+		</div>
+		<script type="text/javascript">
+			var container = document.querySelector("#container");
+			container.addEventListener("click",function(){
+				container.classList.toggle("active");
+			},false)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+body{
+	background-color: #EEEEEE;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+#container{
+	width: 500px;
+	align-items: center;
+}
+h2{
+	line-height: 50px;
+	text-align: center;
+	color: #262626;
+}
+.section{
+	height: auto;
+}
+.tit{
+	background-color: #262626;
+	color: white;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 34px 34px 0px 0px;
+	cursor: pointer;
+}
+.content{
+	border: 2px solid #262626;
+	font-size: 14px;
+	padding: 10px 20px;
+	max-height: 0;
+	opacity: 0;
+	transition: all 0.2s;
+}
+.content p{
+	margin: 14px 0px;
+	transform: scale(0);
+	transition: .5s;
+}
+.content.active{
+	max-height: 100%;
+	margin-bottom: 20px;
+	opacity: 1;
+	transition: .5s;
+}
+.content.active p{
+	transform: scale(1);
+}

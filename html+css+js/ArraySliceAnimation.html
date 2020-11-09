@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ArraySliceAnimation</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ArraySliceAnimation.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<h1>ARRAY SLICE</h1>
+			<ul>
+				<li>0</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+			</ul>
+			<div class="boxinput">
+				<span class="input1">
+					<span class="zi">start</span>
+					<span class="kuo">{</span>
+					<input class="xie" id="start" value="0" maxlength="1"/>
+					<span class="kuo">}</span>
+				</span>
+				<span class="input2">
+					<span class="zi">,end</span>
+					<span class="kuo">{</span>
+					<input class="xie" id="end" value="0" maxlength="1"/>
+					<span class="kuo">}</span>
+				</span>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var lis = document.querySelectorAll("li");
+			
+			start.addEventListener("input",function(){
+				var startNum = document.getElementById("start").value;
+				var endNum = document.getElementById("end").value;
+				if(Number(startNum)==0 || Number(startNum)){
+					for(var i=0;i<Number(startNum);i++){
+						lis[i].classList.remove("active");
+					}
+					if(Number(endNum)){
+						for(var j=Number(startNum);j<Number(endNum);j++){
+							lis[j].classList.add("active");
+						}
+					}
+				}
+			});
+			
+			end.addEventListener("input",function(){
+				var endNum = document.getElementById("end").value;
+				var startNum = document.getElementById("start").value;
+				
+				if(Number(endNum)){
+					for(var j=0;j<lis.length;j++){
+						lis[j].classList.remove("active");
+					}
+					var i=0;
+					if(Number(startNum)){
+						i = Number(startNum);
+					}
+					for(;i<Number(endNum);i++){
+						lis[i].classList.add("active");
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

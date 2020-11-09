@@ -1,0 +1,28 @@
+:root{
+  --width:640px;
+  --height:387px;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#container{
+	width: var(--width);
+	height: var(--height);
+	position: relative;
+}
+.image{
+	width: var(--width);
+	height: var(--height);
+	position: absolute;
+	background-image: url(../img/timg.jpg);
+}
+.image:first-child{
+	filter: hue-rotate(60deg);
+}
+.image:last-child{
+	width: calc(var(--x,50%));
+	box-shadow: 4px 0 0 pink;
+}

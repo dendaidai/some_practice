@@ -1,0 +1,104 @@
+#bg{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -200px;
+	background: linear-gradient(to bottom,#5D3355 0%,#B87079 33%,#A198AB 66%,#FDF090 100%);
+	overflow: hidden;
+}
+#yl{
+	width: 70px;
+	height: 70px;
+	background-color: #FFFACD;
+	border-radius: 50%;
+	position: absolute;
+	top: 50px;
+	left: 100px;
+}
+
+.clouds{
+	background-color: #6E415F;
+	opacity: 0.8;
+	width: 100px;
+	height: 20px;
+	position: absolute;
+    left: -40%;
+	top:120px;
+	display: flex;
+	animation: weather 10s linear infinite normal;
+}
+
+@keyframes  weather{
+	0%{
+		left: -40%;
+	}
+	25%{
+		left: 40%;
+	}
+	50%{
+		left:120%
+	}
+	75%{
+		left: 40%;
+	}
+	100%{
+		left: -40%;
+	}
+}
+.clouds .c1{
+
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-color: #6E415F;
+	bottom: 0;
+	position: absolute;
+	border-radius: 50%;
+	left: -15px;
+}
+.clouds .c2{
+
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: #6E415F;
+	bottom: 0;
+	position: absolute;
+	border-radius: 50%;
+}
+.clouds .c3{
+
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #6E415F;
+	bottom: 0;
+	position: absolute;
+	border-radius: 50%;
+	left: 20px;
+}
+.clouds .c4{
+
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #6E415F;
+	bottom: 0;
+	position: absolute;
+	border-radius: 50%;
+	left: 40px;
+}
+.clouds .c5{
+
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-color: #6E415F;
+	bottom: 0;
+	position: absolute;
+	border-radius: 50%;
+	left: 80px;
+}

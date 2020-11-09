@@ -1,0 +1,109 @@
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: radial-gradient(at center center,#645858,#1C1C1C);
+}
+#container{
+	width: 228px;
+	height: 228px;
+	text-align: center;
+	line-height: 200px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+#text{
+	width: 200px;
+	height: 200px;
+	color: #AA9600;
+	font-size: 120px;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	background-color: #2F2F2F;
+}
+.loader1,.loader2,.loader3,.loader4{
+	background-color: #AA9600;
+	position: absolute;
+}
+.loader1,.loader3{
+	width: 228px;
+	height: 14px;
+}
+.loader2,.loader4{
+	width: 14px;
+	height: 228px;
+}
+.loader1{
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	animation: a1 1s linear infinite;
+}
+.loader2{
+	top: 0px;
+	right: 0px;
+	height: 0px;
+	animation: a2 1s linear infinite;
+	animation-delay: 0.5s;
+}
+.loader3{
+	bottom: 0px;
+	right: 0px;
+	width: 0px;
+	animation: a3 1s linear infinite;
+}
+.loader4{
+	bottom: 0px;
+	left: 0px;
+	height: 0px;
+	animation: a4 1s linear infinite;
+	animation-delay: 0.5s;
+}
+
+@keyframes a1{
+	50%{
+		width: 228px;
+		margin-left: 0px;
+	}
+	100%{
+		width: 0px;
+		margin-left: 228px;
+	}
+}
+@keyframes a2{
+	50%{
+		height: 228px;
+		margin-top: 0px;
+	}
+	100%{
+		height: 0px;
+		margin-top: 228px;
+	}
+}
+@keyframes a3{
+	50%{
+		width: 228px;
+		margin-right: 0px;
+	}
+	100%{
+		width: 0px;
+		margin-right: 228px;
+	}
+}
+@keyframes a4{
+	50%{
+		height: 228px;
+		margin-bottom: 0px;
+	}
+	100%{
+		height: 0px;
+		margin-bottom: 228px;
+	}
+}
+

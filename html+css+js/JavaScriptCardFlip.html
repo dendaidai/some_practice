@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Card Flip</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/JavaScriptCardFlip.css"/>
+	</head>
+	<body>
+		<div id="container">
+				<div id="zheng">TRUECODES</div>
+				<div id="fan">CODEBLOGGER</div>
+		</div>
+		<script type="text/javascript">
+			var box = document.querySelector("#container");
+			box.addEventListener("click",function(){
+				box.classList.toggle("active");
+			})
+		</script>
+	</body>
+</html>

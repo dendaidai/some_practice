@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>按钮1</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animeBut.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<form class="toggle">
+				<input type="radio" id="bt1" name="bt"/>
+				<label for="bt1" name="lab1">True</label>
+				
+				<input type="radio" id="bt2" name="bt"/>
+				<label for="bt2" name="lab2">Codes</label>
+				
+				<div id="flap"><span>True</span></div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			var but = {}
+			but.toggle = document.querySelector(".toggle")
+			but.labs = document.querySelectorAll("label")
+			but.bt1 = document.querySelector("#bt1")
+			but.bt2 = document.querySelector("#bt2")
+			but.flap = document.querySelector("#flap")
+			
+			
+			but.bt1.addEventListener("change",function(){
+				but.flap.classList.toggle("active")
+				window.setTimeout(function(){
+					but.flap.firstElementChild.textContent = "True"
+					but.flap.firstElementChild.classList.toggle("content")
+				},250)
+				
+			})
+			
+			but.bt2.addEventListener("change",function(){
+				but.flap.classList.toggle("active")
+				window.setTimeout(function(){
+					but.flap.firstElementChild.textContent = "Codes"
+					but.flap.firstElementChild.classList.toggle("content")
+				},250)
+			})
+			
+			but.flap.addEventListener("transitionend",function(){
+				if(but.bt1.checked){
+					but.toggle.classList.toggle("left")
+					window.setTimeout(function(){
+						but.toggle.classList.toggle("left")
+					},400)
+				}else{
+					but.toggle.classList.toggle("right")
+					window.setTimeout(function(){
+						but.toggle.classList.toggle("right")
+					},400)
+				}
+			})
+		</script>
+	</body>
+</html>

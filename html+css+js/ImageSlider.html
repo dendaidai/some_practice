@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ImageSlider</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ImageSlider.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<h1>JavaScript Image Slider</h1>
+			<h3>image slide</h3>
+			<div id="bg">
+					<img src="img/1.jpg" id="content">
+					<ul id="bottom">
+						<li class="circle"></li>
+						<li class="circle"></li>
+						<li class="circle"></li>
+						<li class="circle"></li>
+						<li class="circle"></li>
+						<li class="circle"></li>
+					</ul>
+					<div id="left" class="button">&lt;</div>
+					<div id="right" class="button">&gt;</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			const imgs = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg"];
+			const leftBut = document.getElementById("left");
+			const rightBut = document.getElementById("right");
+			const lis = document.getElementsByClassName("circle");
+			const img = document.getElementById("content");
+			const bg = document.getElementById("bg");
+			
+			const index = imgs.indexOf(img.getAttribute("src"));
+			lis[index].style.backgroundColor = "white";
+			
+			
+			leftBut.addEventListener("click",function(){
+				/* console.log(img.getAttribute("src")) */
+				const index = imgs.indexOf(img.getAttribute("src"));
+				/* console.log(index) */
+				if(index!==0){
+					img.setAttribute("src",imgs[index-1])
+				}
+			},false);
+			
+			rightBut.addEventListener("click",function(){
+				const index = imgs.indexOf(img.getAttribute("src"));
+				if(index!==(imgs.length-1)){
+					img.setAttribute("src",imgs[index+1])
+				}
+			},false);
+			
+			for(let i=0;i<lis.length;i++){
+				lis[i].addEventListener("click",function(){
+					img.setAttribute("src",imgs[i])
+					
+				},false)
+			}
+			
+			bg.addEventListener("click",function(){
+				/* console.log("111") */
+				const index = imgs.indexOf(img.getAttribute("src"));
+				/* console.log(index); */
+				for(let j=0;j<lis.length;j++){
+					if(j===index){
+						lis[index].style.backgroundColor = "white";
+					}else{
+						lis[j].style.backgroundColor = "#333";
+					}	
+				}
+			},false);
+			
+			setInterval(function(){
+				const indexx = imgs.indexOf(img.getAttribute("src"));
+				let rs = (indexx+1)%imgs.length;
+				console.log(rs);
+				img.setAttribute("src",imgs[rs]);
+				for(let j=0;j<lis.length;j++){
+					if(j===rs){
+						lis[j].style.backgroundColor = "white";
+					}else{
+						lis[j].style.backgroundColor = "#333";
+					}	
+				}
+			},5000)
+			
+		</script>
+	</body>
+</html>

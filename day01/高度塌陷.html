@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			#box{
+				width:800px;
+				background: yellow;
+				/*height: 800px;*/
+				/*overflow: hidden;*/
+			}
+			#box img{
+				display: block;
+				float: left;
+			}
+			/*#box .d01{
+				width: 50px;
+				height: 50px;
+				background: palegoldenrod;
+				clear: both;
+			}*/
+			.clear_fix::after{
+				content: "";
+				height: 0;
+				display: block;
+				clear: both;
+				overflow: hidden;
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="clear_fix">
+			<img src="img/case_img_03.png"/>
+			<img src="img/case_img_05.png"/>
+			<img src="img/case_img_07.png"/>
+			<img src="img/case_img_09.png"/>
+			<img src="img/case_img_03.png"/>
+			<img src="img/case_img_05.png"/>
+			<img src="img/case_img_07.png"/>
+			<img src="img/case_img_09.png"/>
+			<img src="img/case_img_03.png"/>
+			<img src="img/case_img_05.png"/>
+			<img src="img/case_img_07.png"/>
+			<img src="img/case_img_09.png"/>
+			<img src="img/case_img_03.png"/>
+			<img src="img/case_img_05.png"/>
+			<img src="img/case_img_07.png"/>
+			<img src="img/case_img_09.png"/>
+			<img src="img/case_img_03.png"/>
+			<img src="img/case_img_05.png"/>
+			<img src="img/case_img_07.png"/>
+			<img src="img/case_img_09.png"/>
+			<img src="img/case_img_03.png"/>
+			<img src="img/case_img_05.png"/>
+			<img src="img/case_img_07.png"/>
+			<img src="img/case_img_09.png"/>
+			<!--<div class="d01"></div>-->
+		</div>
+	</body>
+</html>

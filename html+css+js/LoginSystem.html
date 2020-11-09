@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LoginSystem</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/LoginSystem.css"/>
+	</head>
+	<body>
+		<form action="#" id="container">
+			<div class="name">
+			<span><img src="img/user.jpg"></span>
+			<input type="text" placeholder="Username">
+			</div>
+			<div class="pwd">
+			<span><img src="img/pwd.jpg"></span>
+			<input type="password" placeholder="Password">
+			</div>
+			<button type="button" class="login">LOGIN</button>
+		</form>
+		<script type="text/javascript">
+			const inputs = document.getElementsByTagName("input");
+			/* const loginBtn = document.getElementsByClassName("login")[0]; */
+			
+			Array.prototype.forEach.call(inputs,function(inputEl){
+				inputEl.addEventListener("focus",function(){
+					this.classList.toggle("active");
+				},false)
+				inputEl.addEventListener("blur",function(){
+					this.classList.toggle("active");
+				},false)
+			})
+			
+			/* loginBtn.addEventListener("click",function(){
+				this.classList.toggle("active");
+			},false) */
+		</script>
+	</body>
+</html>

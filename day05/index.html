@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>3D旋转相册</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background: url(img/bg.jpg) no-repeat;
+				background-size: 100%;
+				perspective: 2500px;
+				/*perspective-origin: left bottom;*/
+			}
+			.box{
+				width: 500px;
+				height: 240px;
+				/*background: yellow;*/
+				position: absolute;
+				top:0;left: 0;
+				right: 0;bottom: 0;
+				margin: auto;
+				transform-style: preserve-3d;
+				animation: play 20s linear infinite;
+			}
+			.box div{
+				width: 500px;
+				height: 240px;
+				position: absolute;
+				border: 2px solid white;
+				box-shadow: 0px 0px 10px white;
+				border-radius: 50px;
+				transform-origin: center center 0px;
+			}
+			@keyframes play{
+				0%{
+					transform: rotateX(10deg) rotateY(0deg);
+				}
+				25%{
+					transform: rotateX(-10deg) rotateY(90deg);
+				}
+				50%{
+					transform: rotateX(10deg) rotateY(180deg);
+				}
+				75%{
+					transform: rotateX(-10deg) rotateY(270deg);
+				}
+				100%{
+					transform: rotateX(10deg) rotateY(360deg);
+				}
+			}
+			.box div img{
+				width: 500px;
+				height: 240px;
+			    border-radius: 50px;
+			}
+			.box .img01{
+				transform: translateZ(600px);
+			}
+			.box .img02{
+				transform: rotateY(60deg) translateZ(600px);
+			}
+			.box .img03{
+				transform: rotateY(120deg) translateZ(600px);
+			}
+			.box .img06{
+				transform: rotateY(180deg) translateZ(600px);
+			}
+			.box .img07{
+				transform: rotateY(240deg) translateZ(600px);
+			}
+			.box .img08{
+				transform: rotateY(300deg) translateZ(600px);
+			}
+			.box .img10{
+				transform: rotateY(360deg) translateZ(600px);
+			}
+			.box .xiaoren{
+				border: none;
+				border-radius: 0px;
+				box-shadow: 0px 0px 0px white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="xiaoren">
+				<img src="img/a.gif"/>
+			</div>
+			<div class="img01">
+				<img src="img/01.jpg"/>
+			</div>
+			<div class="img02">
+				<img src="img/02.jpg"/>
+			</div>
+			<div class="img03">
+				<img src="img/03.png"/>
+			</div>
+			<!--<div class="img04">
+				<img src="img/04.jpg"/>
+			</div>-->
+			<!--<div class="img05">
+				<img src="img/05.jpg"/>
+			</div>-->
+			<div class="img06">
+				<img src="img/06.jpg"/>
+			</div>
+			<div class="img07">
+				<img src="img/07.jpg"/>
+			</div>
+			<div class="img08">
+				<img src="img/08.jpg"/>
+			</div>
+			<!--<div class="img09">
+				<img src="img/09.jpg"/>
+			</div>-->
+			<div class="img10">
+				<img src="img/10.jpg"/>
+			</div>
+		</div>
+		<!-- controls="controls"显示控件 -->
+		<audio controls="controls" autoplay="autoplay" loop="true" src="img/aaaaa.mp3" >
+			当前浏览器不支持audio
+		</audio>
+	</body>
+</html>

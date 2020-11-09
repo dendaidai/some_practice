@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>电子相册</title>
+		<style type="text/css">* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: palegoldenrod;
+}
+
+.box {
+	width: 800px;
+	height: 350px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	background: black;
+}
+
+h2 {
+	height: 50px;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+}
+
+.list_big{
+	list-style: none;
+	width: 600px;
+	height: 300px;
+	float: left;
+	overflow: hidden;
+}
+.list_big li{
+	list-style: none;
+	width: 600px;
+	height: 300px;
+}
+.list_big li img{
+	width: 600px;
+	height: 300px;
+}
+.list_small{
+	list-style: none;
+	width: 180px;
+	height: 300px;
+	float: right;
+	overflow: scroll;
+}
+.list_small li{
+	width: 156px;
+	height: 90px;
+	
+}	
+
+.list_small li img{
+	width: 156px;
+	height: 90px;
+}	
+</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2>电子相册</h2>
+			<ul class="list_big">
+				<li><img id="im1" src="img/妲己-女仆咖啡.jpg"/></li>
+				<li><img id="im2" src="img/妲己-少女阿狸.jpg"/></li>
+				<li><img id="im3" src="img/妲己-热情桑巴.jpg"/></li>
+				<li><img id="im4" src="img/妲己-魅力维加斯.jpg"/></li>
+			</ul>
+			<ul class="list_small">
+				<li><a href="#im1"><img src="img/妲己-女仆咖啡.jpg" alt="" /></a></li>
+				<li><a href="#im2"><img src="img/妲己-少女阿狸.jpg" alt="" /></a></li>
+				<li><a href="#im3"><img src="img/妲己-热情桑巴.jpg" alt="" /></a></li>
+				<li><a href="#im4"><img src="img/妲己-魅力维加斯.jpg" alt="" /></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

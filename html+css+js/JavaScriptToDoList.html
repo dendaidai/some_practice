@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScriptToDoList</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/JavaScriptToDoList.css"/>
+	</head>
+	<body>
+		<div id="container">
+			    <h3>TO DO LIST</h3>
+				<div id="addBox">
+					<span id="btn"></span>
+				<input type="text" id="shuru" placeholder="Add to-do...">
+			    </div>
+			
+			     <div id="list">
+					 <div class="item">
+						 <p class="itemTxt">Hello,World!</p>
+						 <span class="itemBt"></span>
+					 </div> 
+				 </div>
+		</div>
+		<script type="text/javascript">
+			const btn = document.getElementById("btn");
+			const list = document.getElementById("list");
+			const ps = document.getElementsByClassName("itemTxt");
+			const itemBts = document.getElementsByClassName("itemBt");
+			
+			Array.prototype.forEach.call(ps,function(el,index,array){
+				el.addEventListener("click",function(){
+					this.parentElement.classList.toggle("active");
+				},false)
+			})
+			
+			Array.prototype.forEach.call(itemBts,function(el,index,array){
+				el.addEventListener("click",function(){
+					list.removeChild(this.parentElement);
+				},false)
+			})
+			
+			btn.addEventListener("click",function(){
+				const inputValue = document.getElementById("shuru").value.trim();
+				//清空输入框
+				document.getElementById("shuru").value = "";
+				if(!inputValue){
+					alert("输入不能为空");
+					return;
+				}
+				const item = document.createElement("div");
+				const itemTxt = document.createElement("p");
+				const itemBt = document.createElement("span");
+				item.classList.add("item");
+				itemTxt.classList.add("itemTxt");
+				itemBt.classList.add("itemBt");
+				itemTxt.innerHTML = inputValue;
+				
+				itemTxt.addEventListener("click",function(){
+					this.parentElement.classList.toggle("active");
+				},false);
+				itemBt.addEventListener("click",function(){
+					list.removeChild(this.parentElement);
+				},false)
+				
+				item.appendChild(itemTxt);
+				item.appendChild(itemBt);
+				list.appendChild(item)
+			},false);
+			
+			
+		</script>
+	</body>
+</html>

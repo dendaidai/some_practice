@@ -1,0 +1,31 @@
+/*版心区域*/
+#logo-wrap,#banner-wrap,#server-wrap,#case-wrap,#news-wrap,#footer-wrap{
+	width: 1082px;
+	margin: 0 auto;
+}
+#logo-wrap{
+	height: 81px;
+	/*background: palegoldenrod;*/
+}
+#logo-wrap .logo_img{
+	height: 62px;
+	padding-top: 19px;
+	float: left;
+}
+#logo-wrap .nav{
+	height: 81px;
+	float: right;
+}
+#logo-wrap li{
+	float: left;
+}
+#logo-wrap li a{
+	font-size: 14px;
+	line-height: 81px;
+	color: #646464;
+	padding: 0px 25px;
+	display: block;
+}
+#logo-wrap li .a_end{
+	padding-right: 0px;
+}
